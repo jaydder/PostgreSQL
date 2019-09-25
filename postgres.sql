@@ -87,6 +87,14 @@ delete	from produto where id=7
 
 select * from produto inner join categoria on produto.categoria_id = categoria.id
 
+-----------------------------------------------------------------
+
+select produto.id as prodid,produto.descricao as proddesc,qtd,valor,categoria_id,produto.status as prodstatus,categoria.id as catid,categoria.descricao as catdesc,categoria.status as catstatus
+from produto
+inner join categoria on produto.categoria_id = categoria.id
+----------------------------------------------------------------
+
+select descricao,qtd,valor, (qtd * valor) as total from produto
 
 
 
